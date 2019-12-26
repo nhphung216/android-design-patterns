@@ -5,13 +5,13 @@ package com.example.kyle.abstractfactory.breads;
  */
 public class Baguette implements Bread {
 
-    @Override
-    public String name() {
-        return "Baguette";
-    }
+  @Override
+  public String name() {
+    return "Baguette";
+  }
 
-    @Override
-    public String calories() {
-        return " : 65 kcal";
-    }
+  @Override
+  public String calories() {
+    return " : 65 kcal";
+  }
 }

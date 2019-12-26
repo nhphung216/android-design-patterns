@@ -6,9 +6,9 @@ import com.example.kyle.abstractfactory.fillings.Filling;
 /**
  * Created by kyle on 26/07/2016.
  */
-public abstract class AbstractFactory {
+abstract class AbstractFactory {
 
-    abstract Bread getBread(String bread);
+  abstract Bread getBread(String bread);
 
-    abstract Filling getFilling(String filling);
+  abstract Filling getFilling(String filling);
 }

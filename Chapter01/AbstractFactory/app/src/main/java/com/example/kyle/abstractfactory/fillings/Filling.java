@@ -5,7 +5,7 @@ package com.example.kyle.abstractfactory.fillings;
  */
 public interface Filling {
 
-    String name();
+  String name();
 
-    String calories();
+  String calories();
 }

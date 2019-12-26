@@ -8,27 +8,27 @@ import com.example.kyle.abstractfactory.fillings.Tomato;
 /**
  * Created by kyle on 26/07/2016.
  */
-public class FillingFactory extends AbstractFactory {
+class FillingFactory extends AbstractFactory {
 
-    @Override
-    Filling getFilling(String filling) {
+  @Override
+  Filling getFilling(String filling) {
 
-        if (filling == null) {
-            return null;
-        }
-
-        if (filling == "CHE") {
-            return new Cheese();
-
-        } else if (filling == "TOM") {
-            return new Tomato();
-        }
-
-        return null;
+    if (filling == null) {
+      return null;
     }
 
-    @Override
-    Bread getBread(String bread) {
-        return null;
+    if (filling.equals("CHE")) {
+      return new Cheese();
+
+    } else if (filling.equals("TOM")) {
+      return new Tomato();
     }
+
+    return null;
+  }
+
+  @Override
+  Bread getBread(String bread) {
+    return null;
+  }
 }

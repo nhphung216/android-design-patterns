@@ -5,13 +5,13 @@ package com.example.kyle.abstractfactory.fillings;
  */
 public class Tomato implements Filling {
 
-    @Override
-    public String name() {
-        return "Tomato";
-    }
+  @Override
+  public String name() {
+    return "Tomato";
+  }
 
-    @Override
-    public String calories() {
-        return " : 15 kcal";
-    }
+  @Override
+  public String calories() {
+    return " : 15 kcal";
+  }
 }

@@ -8,22 +8,21 @@ import com.example.kyle.factorypattern.breads.Roll;
 /**
  * Created by kyle on 26/07/2016.
  */
-public class BreadFactory {
+class BreadFactory {
 
-  public Bread getBread(String breadType) {
+  Bread getBread(String breadType) {
 
     if (breadType == null) {
       return null;
     }
 
-    if (breadType == "BRI") {
-      return new Brioche();
-
-    } else if (breadType == "BAG") {
-      return new Baguette();
-
-    } else if (breadType == "ROL") {
-      return new Roll();
+    switch (breadType) {
+      case "BRI":
+        return new Brioche();
+      case "BAG":
+        return new Baguette();
+      case "ROL":
+        return new Roll();
     }
 
     return null;
