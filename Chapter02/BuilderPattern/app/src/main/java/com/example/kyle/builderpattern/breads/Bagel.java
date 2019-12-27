@@ -5,13 +5,13 @@ package com.example.kyle.builderpattern.breads;
  */
 public class Bagel extends Bread {
 
-    @Override
-    public String name() {
-        return "Bagel";
-    }
+  @Override
+  public String name() {
+    return "Bagel";
+  }
 
-    @Override
-    public int calories() {
-        return 250;
-    }
+  @Override
+  public int calories() {
+    return 250;
+  }
 }

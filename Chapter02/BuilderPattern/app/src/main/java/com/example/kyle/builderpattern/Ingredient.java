@@ -5,6 +5,7 @@ package com.example.kyle.builderpattern;
  */
 public interface Ingredient {
 
-    String name();
-    int calories();
+  String name();
+
+  int calories();
 }

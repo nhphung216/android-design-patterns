@@ -8,28 +8,29 @@ import com.example.kyle.builderpattern.breads.Bun;
 import com.example.kyle.builderpattern.fillings.CreamCheese;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String DEBUG_TAG = "tag";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+  private static final String DEBUG_TAG = "tag";
 
-        // Build a customized sandwich
-        SandwichBuilder builder = new SandwichBuilder();
-        Sandwich custom = new Sandwich();
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
 
-        // Simulate user selections
-        custom = builder.build(custom, new Bun());
-        custom = builder.build(custom, new CreamCheese());
-        Log.d(DEBUG_TAG, "CUSTOMIZED");
-        custom.getSandwich();
-        custom.getCalories();
+    // Build a customized sandwich
+    Sandwich custom = new Sandwich();
 
-        // Build a ready made sandwich
-        Sandwich offTheShelf = SandwichBuilder.readyMade();
-        Log.d(DEBUG_TAG, "READY MADE");
-        offTheShelf.getSandwich();
-        offTheShelf.getCalories();
-    }
+    // Simulate user selections
+    SandwichBuilder.build(custom, new Bun());
+    SandwichBuilder.build(custom, new CreamCheese());
+
+    Log.d(DEBUG_TAG, "------------ CUSTOMIZED ------------");
+    custom.getSandwich();
+    custom.getCalories();
+
+    // Build a ready made sandwich
+    Sandwich offTheShelf = SandwichBuilder.readyMade();
+    Log.d(DEBUG_TAG, "------------ READY MADE ------------");
+    offTheShelf.getSandwich();
+    offTheShelf.getCalories();
+  }
 }

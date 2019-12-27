@@ -7,13 +7,13 @@ import com.example.kyle.builderpattern.fillings.Filling;
  */
 public class SmokedSalmon extends Filling {
 
-    @Override
-    public String name() {
-        return "Smoked salmon";
-    }
+  @Override
+  public String name() {
+    return "Smoked salmon";
+  }
 
-    @Override
-    public int calories() {
-        return 400;
-    }
+  @Override
+  public int calories() {
+    return 400;
+  }
 }
